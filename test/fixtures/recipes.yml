@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Spaghetti:
+  name: Spaghetti and Meatballs
+  instructions: Boil spaghetti. Bake meatbals. Combine with sauce.
+  source: http://fineitaliandining.com
+
+Pie:
+  name: Apple Pie
+  instructions: Bake the pie.
+  source: http://www.allrecipes.com

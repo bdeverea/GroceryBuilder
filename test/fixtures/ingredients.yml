@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  item_id: 1
+  recipe_id: 1
+  quantity: 1
+  unit: MyString
+
+two:
+  item_id: 1
+  recipe_id: 1
+  quantity: 1
+  unit: MyString
