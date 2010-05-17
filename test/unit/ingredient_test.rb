@@ -28,34 +28,22 @@ class IngredientTest < ActiveSupport::TestCase
       assert @ingredient.respond_to?(:quantity)
     end
     
-    should "have a name" do
+    should "have a quantity assigned" do
       assert_raise(ActiveRecord::RecordInvalid) do 
-        Factory.create(:flour, :name => "")
+        Factory.create(:cup_of_flour, :quantity => "")
       end
       
-      flour = Factory.build(:flour)
-      assert flour.invalid? 
-      assert flour.errors[:name].any?
-      assert_equal flour.errors[:name].to_s, "has already been taken"
+      cup_of_flour = Factory.build(:cup_of_flour, :quantity => "")
+      assert cup_of_flour.invalid? 
+      assert cup_of_flour.errors[:quantity].any?
+      assert_equal cup_of_flour.errors[:quantity].to_s, "can't be blank"
       
-    end
-    
-    should "have a unique name" do
-      assert_raise(ActiveRecord::RecordInvalid) do 
-        Factory.create(:flour)
-      end
     end
   end
   
-  context "an existing ingredient" do
+  context "with an existing ingredient" do
     setup do
       
-    end
-    
-    should "have an item" do
-    end
-    
-    should "have belong to a recipe" do
     end
     
   end

@@ -21,4 +21,19 @@ class RecipeTest < ActiveSupport::TestCase
       end
     end
   end
+  
+  context "with a recipe" do 
+    setup do
+      @cake = Factory.build(:cake_recipe)
+    end
+    
+    should "create an item" do
+      assert_equal @cake.ingredient.item.id, "1"
+    end
+    
+    should "create an ingredient" do
+      
+    end
+  end
+  
 end
